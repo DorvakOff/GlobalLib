@@ -14,7 +14,7 @@ public class StringUtils {
      * @return true if the object is empty
      */
     public static boolean isEmpty(Object obj) {
-        return Objects.toString(obj, "").isEmpty();
+        return toString(obj).isEmpty();
     }
 
     /**
@@ -33,7 +33,7 @@ public class StringUtils {
      * @return String
      */
     public static String toString(Object obj, String replace) {
-        return Objects.toString(obj, replace);
+        return Objects.toString(obj, replace).trim();
     }
 
     /**
@@ -42,6 +42,6 @@ public class StringUtils {
      * @return String
      */
     public static String toString(Object obj) {
-        return Objects.toString(obj, "");
+        return toString(obj, "");
     }
 }
