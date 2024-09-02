@@ -36,7 +36,7 @@ public class MultiThreading {
      * @param unit the time unit
      * @return the scheduled future
      */
-    public static @NotNull ScheduledFuture<?> schedule(Runnable r, long initialDelay, long delay, TimeUnit unit) {
+    public static @NotNull ScheduledFuture<?> scheduleRepeatingTask(Runnable r, long initialDelay, long delay, TimeUnit unit) {
         return RUNNABLE_POOL.scheduleAtFixedRate(r, initialDelay, delay, unit);
     }
 
